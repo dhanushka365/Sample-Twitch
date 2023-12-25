@@ -1,5 +1,12 @@
-﻿namespace Sample.Contracts
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sample.Contracts
 {
+
     public interface SubmitOrder
     {
         public Guid OrderId { get; }
@@ -8,4 +15,5 @@
         public string[] Items { get; }
 
     }
+
 }

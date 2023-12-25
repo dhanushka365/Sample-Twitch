@@ -1,10 +1,14 @@
 using MassTransit;
+using Sample.Components;
+using Sample.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddMassTransit(cfg =>
 {
+    cfg.AddConsumer<SubmitOrderConsumer>();
+    cfg.AddRequestClient<SubmitOrder>();
    
 });
 
